@@ -9,7 +9,7 @@ export default class ListDemo extends Component {
       '东方财富网创办于2004年,始终坚持“用户为王”的经营理念，为全国广大投资者提供专业、及时、全面的金融信息服务。2010年3月，东方财富网成功登陆深圳证券交易所，从创立到成功上市，公司只用了5年时间，成为中国创业板IPO历程上的一颗耀眼明星。'
     return (
       <div>
-        <h3>基本</h3>
+        <h3 className="title">基本</h3>
         <List
           renderHeader={() => '公司信息'}
           renderFooter={() => '以上信息仅供参考'}
