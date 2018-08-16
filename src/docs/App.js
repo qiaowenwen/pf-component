@@ -6,23 +6,36 @@ const Item = List.Item
 
 export default class App extends Component {
   render() {
+    console.log(this)
     return (
       <div>
         <List>
-          <Item extra="详情" arrow>
-            <Link to="button">
-              <span>Button</span>
-            </Link>
+          <Item
+            extra="详情"
+            arrow
+            onClick={() => {
+              this.props.history.push('button')
+            }}
+          >
+            Button
           </Item>
-          <Item extra="详情" arrow>
-            <Link to="switch">
-              <span>Switch</span>
-            </Link>
+          <Item
+            extra="详情"
+            arrow
+            onClick={() => {
+              this.props.history.push('switch')
+            }}
+          >
+            Switch
           </Item>
-          <Item extra="详情" arrow>
-            <Link to="list">
-              <span>List</span>
-            </Link>
+          <Item
+            extra="详情"
+            arrow
+            onClick={() => {
+              this.props.history.push('list')
+            }}
+          >
+            List
           </Item>
         </List>
       </div>
