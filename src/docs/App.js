@@ -45,6 +45,24 @@ export default class App extends Component {
           >
             Empty
           </Item>
+          <Item
+            extra="详情"
+            arrow
+            onClick={() => {
+              this.props.history.push('whitespace')
+            }}
+          >
+            WhiteSpace
+          </Item>
+          <Item
+            extra="详情"
+            arrow
+            onClick={() => {
+              this.props.history.push('checkbox')
+            }}
+          >
+            Checkbox
+          </Item>
         </List>
       </div>
     )
