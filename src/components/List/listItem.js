@@ -7,15 +7,15 @@ import './listItem.less'
 class ListItem extends Component {
   render() {
     const { extra, children, arrow, long } = this.props
-    const extraClassName = classNames({
-      ['pf-list-extra']: !long
+    const extraClassName = classNames('pf-list-inline', {
+      [`pf-list-inline-long`]: long
     })
 
     return (
       <div className="pf-list-item">
-        <div className="pf-list-inline">
+        <div className={extraClassName}>
           <div className="pf-list-content">{children}</div>
-          <div className={extraClassName}>{extra}</div>
+          <div className="pf-list-extra">{extra}</div>
           {arrow ? (
             <div className="pf-list-arrow">
               <Icon name="enter" />

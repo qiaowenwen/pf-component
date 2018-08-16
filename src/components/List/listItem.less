@@ -17,6 +17,23 @@
     flex: 1;
     position: relative;
 
+    &.pf-list-inline-long {
+      display: block;
+
+      .pf-list-content {
+        padding-bottom: 0;
+      }
+
+      .pf-list-extra {
+        text-overflow: initial;
+        white-space: initial;
+        overflow: inherit;
+        padding-top: 0;
+        font-size: 14px;
+        line-height: 25px;
+      }
+    }
+
     &:after {
       content: '';
       position: absolute;
