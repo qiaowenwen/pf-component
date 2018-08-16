@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
 import { List } from '../components/index'
 
 const Item = List.Item
@@ -36,6 +35,15 @@ export default class App extends Component {
             }}
           >
             List
+          </Item>
+          <Item
+            extra="详情"
+            arrow
+            onClick={() => {
+              this.props.history.push('empty')
+            }}
+          >
+            Empty
           </Item>
         </List>
       </div>
