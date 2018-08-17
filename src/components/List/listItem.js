@@ -8,16 +8,36 @@ function noop() {}
 
 class ListItem extends Component {
   render() {
-    const { extra, children, arrow, long, onClick } = this.props
-    const extraClassName = classNames('pf-list-inline', {
+    const {
+      extra,
+      children,
+      arrow,
+      long,
+      onClick,
+      leftIcon,
+      leftIconColor
+    } = this.props
+
+    const listInlineClassName = classNames('pf-list-inline', {
       [`pf-list-inline-long`]: long
+    })
+
+    const extraClassName = classNames('pf-list-extra', {
+      [`pf-list-extra-fix`]: leftIcon
     })
 
     return (
       <div className="pf-list-item" onClick={onClick}>
-        <div className={extraClassName}>
+        <div className={listInlineClassName}>
+          {leftIcon ? (
+            <Icon
+              name={leftIcon}
+              color={leftIconColor}
+              className="pf-list-image-left"
+            />
+          ) : null}
           <div className="pf-list-content">{children}</div>
-          <div className="pf-list-extra">{extra}</div>
+          {extra ? <div className={extraClassName}>{extra}</div> : null}
           {arrow ? (
             <div className="pf-list-arrow">
               <Icon name="enter" />
@@ -33,14 +53,17 @@ ListItem.propTypes = {
   extra: PropTypes.string,
   long: PropTypes.bool,
   arrow: PropTypes.bool,
-  onClick: PropTypes.func
+  onClick: PropTypes.func,
+  leftIcon: PropTypes.string,
+  leftIconColor: PropTypes.string
 }
 
 ListItem.defaultProps = {
   extra: '',
   long: false,
   arrow: false,
-  onClick: noop
+  onClick: noop,
+  leftIcon: ''
 }
 
 export default ListItem
