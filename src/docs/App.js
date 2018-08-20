@@ -49,6 +49,15 @@ export default class App extends Component {
             extra="详情"
             arrow
             onClick={() => {
+              this.props.history.push('flex')
+            }}
+          >
+            Flex
+          </Item>
+          <Item
+            extra="详情"
+            arrow
+            onClick={() => {
               this.props.history.push('empty')
             }}
           >
@@ -71,6 +80,15 @@ export default class App extends Component {
             }}
           >
             Checkbox
+          </Item>
+          <Item
+            extra="详情"
+            arrow
+            onClick={() => {
+              this.props.history.push('imagepicker')
+            }}
+          >
+            ImagePicker
           </Item>
         </List>
       </div>
