@@ -90,6 +90,15 @@ export default class App extends Component {
           >
             ImagePicker
           </Item>
+          <Item
+            extra="详情"
+            arrow
+            onClick={() => {
+              this.props.history.push('message')
+            }}
+          >
+            Message
+          </Item>
         </List>
       </div>
     )

@@ -11,6 +11,7 @@ import Empty from './src/docs/demo/empty'
 import WhiteSpace from './src/docs/demo/whitespace'
 import Checkbox from './src/docs/demo/checkbox'
 import ImagePicker from './src/docs/demo/imagepicker'
+import Message from './src/docs/demo/message'
 import './src/docs/App.css'
 
 ReactDOM.render(
@@ -26,6 +27,7 @@ ReactDOM.render(
       <Route path="/whitespace" component={WhiteSpace} />
       <Route path="/checkbox" component={Checkbox} />
       <Route path="/imagepicker" component={ImagePicker} />
+      <Route path="/message" component={Message} />
     </Switch>
   </HashRouter>,
   document.getElementById('App')
