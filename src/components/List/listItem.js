@@ -50,7 +50,7 @@ class ListItem extends Component {
 }
 
 ListItem.propTypes = {
-  extra: PropTypes.string,
+  extra: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
   long: PropTypes.bool,
   arrow: PropTypes.bool,
   onClick: PropTypes.func,
