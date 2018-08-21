@@ -1,9 +1,13 @@
 import React, { Component } from 'react'
+import Checkbox from 'rc-checkbox'
+import 'rc-checkbox/assets/index.css'
+import './style.less'
 
-class Checkbox extends Component {
+class CheckBox extends Component {
   render() {
-    return <div>checkbox</div>
+    const { ...restProps } = this.props
+    return <Checkbox className="pf-checkbox" {...restProps} />
   }
 }
 
-export default Checkbox
+export default CheckBox

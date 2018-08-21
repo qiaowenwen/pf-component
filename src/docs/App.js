@@ -31,6 +31,15 @@ export default class App extends Component {
             extra="详情"
             arrow
             onClick={() => {
+              this.props.history.push('input')
+            }}
+          >
+            InputItem
+          </Item>
+          <Item
+            extra="详情"
+            arrow
+            onClick={() => {
               this.props.history.push('list')
             }}
           >
@@ -44,6 +53,15 @@ export default class App extends Component {
             }}
           >
             ListView
+          </Item>
+          <Item
+            extra="详情"
+            arrow
+            onClick={() => {
+              this.props.history.push('flex')
+            }}
+          >
+            Flex
           </Item>
           <Item
             extra="详情"
@@ -80,6 +98,24 @@ export default class App extends Component {
             }}
           >
             Tabs
+            </Item> 
+            <Item
+            extra="详情"
+            arrow
+            onClick={() => {
+              this.props.history.push('imagepicker')
+            }}
+          >
+            ImagePicker
+          </Item>
+          <Item
+            extra="详情"
+            arrow
+            onClick={() => {
+              this.props.history.push('message')
+            }}
+          >
+            Message
           </Item>
         </List>
       </div>
