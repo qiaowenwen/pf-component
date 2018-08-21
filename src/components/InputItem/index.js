@@ -17,8 +17,16 @@ export default class InputItem extends Component {
     })
   }
   render() {
-    const { inputPreCls, label, placeholder, maxLength } = this.props
+    const {
+      inputPreCls,
+      label,
+      placeholder,
+      maxLength,
+      ...restProps
+    } = this.props
     const { inputValue } = this.state
+
+    const { name } = restProps
 
     const inputItemClass = classNames('pf-list-item', inputPreCls)
     const inputItemInlineClass = classNames(
@@ -32,8 +40,10 @@ export default class InputItem extends Component {
         <div className={inputItemInlineClass}>
           <label className={inputItemLabelClass}>{label}</label>
           <input
+            {...restProps}
             ref={input => (this.inputItem = input)}
             type="text"
+            name={name}
             maxLength={maxLength}
             className={`${inputPreCls}-input`}
             placeholder={placeholder}
