@@ -31,6 +31,15 @@ export default class App extends Component {
             extra="详情"
             arrow
             onClick={() => {
+              this.props.history.push('input')
+            }}
+          >
+            InputItem
+          </Item>
+          <Item
+            extra="详情"
+            arrow
+            onClick={() => {
               this.props.history.push('list')
             }}
           >
