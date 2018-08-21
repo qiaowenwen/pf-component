@@ -94,6 +94,15 @@ export default class App extends Component {
             extra="详情"
             arrow
             onClick={() => {
+              this.props.history.push('tabs')
+            }}
+          >
+            Tabs
+            </Item> 
+            <Item
+            extra="详情"
+            arrow
+            onClick={() => {
               this.props.history.push('imagepicker')
             }}
           >
