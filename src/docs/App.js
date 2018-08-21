@@ -5,7 +5,6 @@ const Item = List.Item
 
 export default class App extends Component {
   render() {
-    console.log(this)
     return (
       <div>
         <List>
@@ -100,6 +99,15 @@ export default class App extends Component {
             Checkbox
           </Item>
           <Item
+            extra="详情"
+            arrow
+            onClick={() => {
+              this.props.history.push('tabs')
+            }}
+          >
+            Tabs
+            </Item> 
+            <Item
             extra="详情"
             arrow
             onClick={() => {

@@ -12,6 +12,7 @@ import Flex from './src/docs/demo/flex'
 import Empty from './src/docs/demo/empty'
 import WhiteSpace from './src/docs/demo/whitespace'
 import Checkbox from './src/docs/demo/checkbox'
+import Tabs from './src/docs/demo/tabs'
 import ImagePicker from './src/docs/demo/imagepicker'
 import Message from './src/docs/demo/message'
 import './src/docs/App.css'
@@ -30,6 +31,7 @@ ReactDOM.render(
       <Route path="/empty" component={Empty} />
       <Route path="/whitespace" component={WhiteSpace} />
       <Route path="/checkbox" component={Checkbox} />
+      <Route path="/tabs" component={Tabs} />
       <Route path="/imagepicker" component={ImagePicker} />
       <Route path="/message" component={Message} />
     </Switch>
