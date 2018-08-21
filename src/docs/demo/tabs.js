@@ -15,13 +15,12 @@ export default class BasicDemo extends Component {
       { title: 'Third Tab', name: '1' },
       { title: 'Third Tab', name: '1' }
     ]
-    const jsonStr = '{"callbackname":"callbackLogin"}'
 
     return (
       <RTabs
         tabData={tabData}
         animated={true}
-        fixHeight={'400'}
+        fixHeight={400}
         initialPage={0}
         renderTabBar={props => <RTabs.DefaultTabBar {...props} page={4} />}
       >

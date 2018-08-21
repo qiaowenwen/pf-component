@@ -5,7 +5,6 @@ const Item = List.Item
 
 export default class App extends Component {
   render() {
-    console.log(this)
     return (
       <div>
         <List>

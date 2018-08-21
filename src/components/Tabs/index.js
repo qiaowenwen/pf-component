@@ -56,7 +56,10 @@ RTabs.propTypes = {
   //tab被点击时回掉
   onTabClick: PropTypes.func,
   //整个组件固定高度
-  fixHeight: PropTypes.string,
+  fixHeight: PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.number
+    ]),
   //选择条的位置
   tabBarPosition: PropTypes.string,
   //tabBar背景色
@@ -66,7 +69,7 @@ RTabs.propTypes = {
   //tabBar非激活Tab文字颜色
   tabBarInactiveTextColor: PropTypes.string,
   //tabBar文字样式
-  tabBarTextStyle: PropTypes.string
+  tabBarTextStyle: PropTypes.any
 }
 
 RTabs.defaultProps = {
