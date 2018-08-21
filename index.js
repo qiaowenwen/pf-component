@@ -5,6 +5,7 @@ import App from './src/docs/App'
 import Button from './src/docs/demo/button'
 import SwitchButton from './src/docs/demo/switch'
 import Input from './src/docs/demo/input'
+import Forms from './src/docs/demo/form'
 import List from './src/docs/demo/list'
 import ListView from './src/docs/demo/listview'
 import Flex from './src/docs/demo/flex'
@@ -22,6 +23,7 @@ ReactDOM.render(
       <Route path="/button" component={Button} />
       <Route path="/switch" component={SwitchButton} />
       <Route path="/input" component={Input} />
+      <Route path="/form" component={Forms} />
       <Route path="/list" component={List} />
       <Route path="/listview" component={ListView} />
       <Route path="/flex" component={Flex} />
