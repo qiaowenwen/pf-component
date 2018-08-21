@@ -9,6 +9,7 @@ import ListView from './src/docs/demo/listview'
 import Empty from './src/docs/demo/empty'
 import WhiteSpace from './src/docs/demo/whitespace'
 import Checkbox from './src/docs/demo/checkbox'
+import Tabs from './src/docs/demo/tabs'
 import './src/docs/App.css'
 
 ReactDOM.render(
@@ -22,6 +23,7 @@ ReactDOM.render(
       <Route path="/empty" component={Empty} />
       <Route path="/whitespace" component={WhiteSpace} />
       <Route path="/checkbox" component={Checkbox} />
+      <Route path="/tabs" component={Tabs} />
     </Switch>
   </HashRouter>,
   document.getElementById('App')
