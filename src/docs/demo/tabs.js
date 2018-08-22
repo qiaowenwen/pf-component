@@ -17,12 +17,16 @@ export default class BasicDemo extends Component {
     ]
 
     return (
+      <div style={{height:'400'}}>
       <RTabs
         tabData={tabData}
         animated={true}
-        fixHeight={400}
         initialPage={0}
-        renderTabBar={props => <RTabs.DefaultTabBar {...props} page={4} />}
+        renderTabBar={props => (
+          <RTabs.DefaultTabBar {...props} page={4}>
+            <div>{props.title}</div>
+          </RTabs.DefaultTabBar>
+        )}
       >
         <div style={{ background: '#CCFFFF' }}>
           <p style={pStyle}>tab 1 1</p>
@@ -74,6 +78,7 @@ export default class BasicDemo extends Component {
           <p style={pStyle}>tab 3 2</p>
         </div>
       </RTabs>
+      </div>
     )
   }
 }

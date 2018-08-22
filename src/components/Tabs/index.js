@@ -20,26 +20,24 @@ class RTabs extends Component {
       tabBarBackgroundColor,
       tabBarActiveTextColor,
       tabBarInactiveTextColor,
-      tabBarTextStyle
+      tabBarTextStyle,
     } = this.props
     return (
-      <div style={{ height: fixHeight }}>
-        <Tabs
-          tabs={tabData}
-          initialPage={initialPage}
-          animated={animated}
-          onChange={onChange}
-          onTabClick={onTabClick}
-          renderTabBar={renderTabBar}
-          tabBarPosition={tabBarPosition}
-          tabBarBackgroundColor={tabBarBackgroundColor}
-          tabBarActiveTextColor={tabBarActiveTextColor}
-          tabBarInactiveTextColor={tabBarInactiveTextColor}
-          tabBarTextStyle={tabBarTextStyle}
-        >
-          {children}
-        </Tabs>
-      </div>
+      <Tabs
+        tabs={tabData}
+        initialPage={initialPage}
+        animated={animated}
+        onChange={onChange}
+        onTabClick={onTabClick}
+        renderTabBar={renderTabBar}
+        tabBarPosition={tabBarPosition}
+        tabBarBackgroundColor={tabBarBackgroundColor}
+        tabBarActiveTextColor={tabBarActiveTextColor}
+        tabBarInactiveTextColor={tabBarInactiveTextColor}
+        tabBarTextStyle={tabBarTextStyle}
+      >
+        {children}
+      </Tabs>
     )
   }
 }
@@ -55,11 +53,6 @@ RTabs.propTypes = {
   onChange: PropTypes.func,
   //tab被点击时回掉
   onTabClick: PropTypes.func,
-  //整个组件固定高度
-  fixHeight: PropTypes.oneOfType([
-      PropTypes.string,
-      PropTypes.number
-    ]),
   //选择条的位置
   tabBarPosition: PropTypes.string,
   //tabBar背景色
@@ -71,14 +64,12 @@ RTabs.propTypes = {
   //tabBar文字样式
   tabBarTextStyle: PropTypes.any
 }
-
 RTabs.defaultProps = {
   tabData: '',
-  onChange:noop,
-  onTabClick:noop,
+  onChange: noop,
+  onTabClick: noop,
   initialPage: 0,
   animated: true,
-  fixHeight: '100%',
   tabBarPosition: 'top',
   tabBarBackgroundColor: '',
   tabBarActiveTextColor: '',
